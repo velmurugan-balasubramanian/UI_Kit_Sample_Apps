@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+  <script type="module" src="https://static-dev.freshcloud.io/freshworks-ui-kit/freshworks-ui-kit.esm.js"></script>
+  <script nomodule src="https://static-dev.freshcloud.io/freshworks-ui-kit/freshworks-ui-kit.js"></script>
+  <script src="modal.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://static.freshdev.io/fdk/2.0/assets/freshdesk.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <fw-tabs>
+    <fw-tab title="Create Issue">
+      <div class="banner">
+        <img src="../resources/img/banner.png" width="300px" />
+        <fw-button onClick="createIssue()" id="createTicket">Create an Issue</fw-button>
+      </div>
+    </fw-tab>
+    <fw-tab title="View Issue">
+      <div id="modal">
+        
+      </div>
+    </fw-tab>
+  </fw-tabs>
+</body>
+</html>
