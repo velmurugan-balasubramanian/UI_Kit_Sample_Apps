@@ -76,6 +76,9 @@ function fetchIssue(issueID) {
     });
 }
 
+/**
+ * Function to create Issue in Github
+ */
 function createIssue() {
 	console.log("Proceeding to create issue from the ticket");
 	getTicketDetails(function (ticketData) {

@@ -15,9 +15,7 @@ $(document).ready(function () {
 /**
  *   Register click event handler for `Create Ticket` button
  */
-function onLoadClickEventHandler() {
-	console.log('hi there');
-	
+function onLoadClickEventHandler() {	
 	$('#createTicket').click(function () {
 		var title = $('#title').val();				// Ticket title fetched from user Input
 		var desc = $('#desc').val();					// Description of the ticket fetched from user input
