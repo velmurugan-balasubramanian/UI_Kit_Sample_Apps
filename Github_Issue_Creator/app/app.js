@@ -5,33 +5,25 @@ $(document).ready(function () {
 	app.initialized()
 		.then(function (_client) {
 			window.client = _client;
-			registerClickEventHandlers();
+			showNotification('danger', 'Sorry! Unable to load app');
+
+			//Registers componenet event, All custom events for the components has to be regisered like below
+			document.getElementById("openModal").addEventListener("fwClick", openModal);
 		})
 		.catch(function (error) {
-			console.error('Error during initialization' + error);
+			showNotification('danger', 'Sorry! Unable to load app');
 		});
 });
 
-/**
- * Register the click event handlers for `Create Issue` and `View Issue Details` buttons
- */
-function registerClickEventHandlers() {
-	document.getElementById("openModal").addEventListener("fwClick", openModal);
-}
 
 /**
  * Function to Open App in Modal
  */
 function openModal() {
-	getTicketDetails(function (data) {
 		client.interface.trigger("showModal", {
 			title: "Github Issue Details",
-			template: "./modal/app.html",
-			data: data.ticket
+			template: "./modal/modal.html",
 		});
-	}, function (error) {
-		console.error(error);
-	});
 }
 
 /**

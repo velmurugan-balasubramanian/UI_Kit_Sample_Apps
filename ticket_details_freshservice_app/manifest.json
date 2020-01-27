@@ -1,9 +1,9 @@
 {
   "platform-version": "2.0",
   "product": {
-    "freshdesk": {
+    "freshservice": {
       "location": {
-        "full_page_app": {
+        "ticket_sidebar": {
           "url": "template.html",
           "icon": "icon.svg"
         }
